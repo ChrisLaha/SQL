@@ -12,7 +12,7 @@ SELECT *
 	In what countries does Northwind have customers?
 */
 
-SELECT Country
+SELECT DISTINCT Country
   FROM Customers;
 
 /*
@@ -20,7 +20,7 @@ SELECT Country
     What are the unique job titles that Northwind's supplier contacts have?
 */
 
-SELECT ContactTitle
+SELECT DISTINCT ContactTitle
   FROM Suppliers;
 
 /*
@@ -45,6 +45,6 @@ SELECT OrderID, OrderDate, ShippedDate, CustomerID, Freight
 	What are the company names, customer names of all of Northwind's customers in London (go ahead and list cities as a check)?
 */
 
-SELECT CompanyName, ContactName
+SELECT CompanyName, ContactName, City
   FROM Customers
   WHERE City='London';
